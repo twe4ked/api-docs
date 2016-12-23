@@ -1,0 +1,116 @@
+body {
+  min-width: 960px;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  margin-left: 0.5em;
+}
+
+a {
+  color: #000;
+}
+
+.navigation {
+  width: 220px;
+  background: #ddd;
+  position: fixed;
+  height: 100%
+}
+
+.content {
+  margin-left: 220px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #fff 0%, #fff 50%, #222 50%, #222 100%);
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+}
+
+section .left {
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+section .right {
+  flex: 1;
+  color: #fff;
+  border-bottom: 1px solid #333;
+}
+
+.padding {
+  padding: 1em;
+}
+
+ul.toc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li.toc-list-item {
+  background: #eee;
+}
+
+li.toc-list-item a {
+  text-decoration: none;
+  padding: 4px 8px;
+  display: block;
+}
+
+ul.toc-list ul.toc-list {
+  padding-left: 1em;
+}
+
+.is-active-link {
+  background: #bbb;
+}
+
+.is-collapsed {
+  display: none;
+}
+
+th {
+  font-size: 0.6em;
+  font-weight: normal;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+td {
+  font-size: 0.9em;
+}
+
+th, td {
+  padding: 8px 4px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 -4px;
+  width: 100%;
+}
+
+thead tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+code.path {
+  background: #eee;
+  display: block;
+  padding: 4px 8px;
+}
+
+code.inline {
+  background: #eee;
+  padding: 2px 4px;
+}
