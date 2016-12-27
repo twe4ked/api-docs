@@ -6,6 +6,61 @@ import json from 'highlight.js/lib/languages/json';
 import irBlack from 'react-syntax-highlighter/dist/styles/ir-black';
 registerLanguage('json', json);
 
+const Parameters = ({parameters}) => {
+  return (
+    <div>
+      <h3>Parameters</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {parameters.map((parameter, index) =>
+            <tr key={index}>
+              <td>
+                <code className="inline">{parameter.name}</code>
+                { parameter.required &&
+                  <abbr title="required">*</abbr>
+                }
+              </td>
+              <td>{parameter.description}</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+const ResponseFields = ({responseFields}) => {
+  return (
+    <div>
+      <h3>Response Fields</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {responseFields.map((field, index) =>
+            <tr key={index}>
+              <td><code className="inline">{field.name}</code></td>
+              <td>{field.description}</td>
+              <td>{field.type}</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 const Resource = ({resourceName, resources}) => {
   return (
     <div className="resource">
@@ -19,58 +74,8 @@ const Resource = ({resourceName, resources}) => {
               <code className="path">
                 {resource.http_method} <strong>{resource.path}</strong>
               </code>
-
-              { !!resource.parameters.length &&
-                <div>
-                  <h3>Parameters</h3>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {resource.parameters.map((parameter, index) =>
-                        <tr key={index}>
-                          <td>
-                            <code className="inline">{parameter.name}</code>
-                            { parameter.required &&
-                              <abbr title="required">*</abbr>
-                            }
-                          </td>
-                          <td>{parameter.description}</td>
-                        </tr>
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              }
-
-              { !!resource.response_fields.length &&
-                <div>
-                  <h3>Response Fields</h3>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {resource.response_fields.map((field, index) =>
-                        <tr key={index}>
-                          <td><code className="inline">{field.name}</code></td>
-                          <td>{field.description}</td>
-                          <td>{field.type}</td>
-                        </tr>
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              }
-
+              { !!resource.parameters.length && <Parameters parameters={resource.parameters} /> }
+              { !!resource.response_fields.length && <ResponseFields responseFields={resource.response_fields} /> }
             </div>
           </div>
           <div className="right">
