@@ -61,31 +61,31 @@ const ResponseFields = ({responseFields}) => {
   )
 }
 
-const Resource = ({resourceName, resources}) => {
+const Resource = ({resource}) => {
   return (
     <div className="resource">
       <div className="padding">
-        <h1 id={resourceName.toLowerCase().replace(/[^a-z]/g, '-')}>{resourceName}</h1>
-        { !!resources[resourceName][0].resourceDescription &&
-          <p>{resources[resourceName][0].resourceDescription}</p>
+        <h1 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h1>
+        { !!resource.description &&
+          <p>{resource.description}</p>
         }
       </div>
-      {resources[resourceName].map((resource, index) =>
+      {resource.examples.map((example, index) =>
         <section key={index}>
           <div className="left">
             <div className="padding">
-              <h2 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h2>
-              <p>{resource.description}</p>
+              <h2 id={example.name.toLowerCase().replace(/[^a-z]/g, '-')}>{example.name}</h2>
+              <p>{example.description}</p>
               <code className="path">
-                {resource.httpMethod} <strong>{resource.path}</strong>
+                {example.httpMethod} <strong>{example.path}</strong>
               </code>
-              { !!resource.parameters.length && <Parameters parameters={resource.parameters} /> }
-              { !!resource.responseFields.length && <ResponseFields responseFields={resource.responseFields} /> }
+              { !!example.parameters.length && <Parameters parameters={example.parameters} /> }
+              { !!example.responseFields.length && <ResponseFields responseFields={example.responseFields} /> }
             </div>
           </div>
           <div className="right">
             <div className="padding">
-              {resource.requests.map((request, index) =>
+              {example.requests.map((request, index) =>
                 <div key={index}>
                   <code>{`${request.request_method} ${request.request_path}`}</code>
                   <SyntaxHighlighter language='json' style={irBlack}>
@@ -104,7 +104,7 @@ const Resource = ({resourceName, resources}) => {
 class App extends Component {
   constructor() {
     super();
-    this.state = { resources: {} };
+    this.state = { resources: [] };
   }
 
   componentDidMount() {
@@ -132,9 +132,9 @@ class App extends Component {
         <div className="navigation"></div>
         <div className="background"></div>
         <div className="content">
-          {Object.keys(this.state.resources).map((resourceName, index) =>
+          {this.state.resources.map((resource, index) =>
             <Resource key={index}
-              resourceName={resourceName}
+              resource={resource}
               resources={this.state.resources}></Resource>
           )}
         </div>
