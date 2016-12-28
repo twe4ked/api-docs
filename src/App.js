@@ -64,7 +64,12 @@ const ResponseFields = ({responseFields}) => {
 const Resource = ({resourceName, resources}) => {
   return (
     <div className="resource">
-      <h1 id={resourceName.toLowerCase().replace(/[^a-z]/g, '-')}>{resourceName}</h1>
+      <div className="padding">
+        <h1 id={resourceName.toLowerCase().replace(/[^a-z]/g, '-')}>{resourceName}</h1>
+        { !!resources[resourceName][0].resourceDescription &&
+          <p>{resources[resourceName][0].resourceDescription}</p>
+        }
+      </div>
       {resources[resourceName].map((resource, index) =>
         <section key={index}>
           <div className="left">
