@@ -72,10 +72,10 @@ const Resource = ({resourceName, resources}) => {
               <h2 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h2>
               <p>{resource.description}</p>
               <code className="path">
-                {resource.http_method} <strong>{resource.path}</strong>
+                {resource.httpMethod} <strong>{resource.path}</strong>
               </code>
               { !!resource.parameters.length && <Parameters parameters={resource.parameters} /> }
-              { !!resource.response_fields.length && <ResponseFields responseFields={resource.response_fields} /> }
+              { !!resource.responseFields.length && <ResponseFields responseFields={resource.responseFields} /> }
             </div>
           </div>
           <div className="right">
