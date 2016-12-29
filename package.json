@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-simple-format": "^0.3.0",
     "react-syntax-highlighter": "^4.0.1",
     "tocbot": "^2.2.1"
   },

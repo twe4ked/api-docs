@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import tocbot from 'tocbot'
+import SimpleFormat from 'react-simple-format';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/light"
 import json from 'highlight.js/lib/languages/json';
 import irBlack from 'react-syntax-highlighter/dist/styles/ir-black';
@@ -67,7 +68,7 @@ const Resource = ({resource}) => {
       <div className="padding">
         <h1 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h1>
         { !!resource.description &&
-          <p>{resource.description}</p>
+          <SimpleFormat text={resource.description} />
         }
       </div>
       {resource.examples.map((example, index) =>
@@ -75,7 +76,9 @@ const Resource = ({resource}) => {
           <div className="left">
             <div className="padding">
               <h2 id={example.name.toLowerCase().replace(/[^a-z]/g, '-')}>{example.name}</h2>
-              <p>{example.description}</p>
+              { !!example.description &&
+                <SimpleFormat text={example.description} />
+              }
               <code className="path">
                 {example.httpMethod} <strong>{example.path}</strong>
               </code>
