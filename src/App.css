@@ -132,3 +132,7 @@ code.inline {
   background: #eee;
   padding: 0.2rem 0.4rem;
 }
+
+.resource-info {
+  width: 50%;
+}
