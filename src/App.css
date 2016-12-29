@@ -117,10 +117,10 @@ code {
 code.path {
   background: #eee;
   display: block;
-  padding: 4px 8px;
+  padding: 0.3rem 0.5rem;
 }
 
 code.inline {
   background: #eee;
-  padding: 2px 4px;
+  padding: 0.2rem 0.4rem;
 }
