@@ -101,6 +101,11 @@ tbody tr {
   border-bottom: 1px solid #eee;
 }
 
+code {
+  font-size: 0.8em;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
 code.path {
   background: #eee;
   display: block;
