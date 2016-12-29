@@ -64,7 +64,7 @@ const ResponseFields = ({responseFields}) => {
 
 const Resource = ({resource}) => {
   return (
-    <div className="resource">
+    <div>
       <div className="resource-info">
         <div className="padding">
           <h1 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h1>
