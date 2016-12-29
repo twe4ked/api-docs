@@ -129,7 +129,10 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="navigation"></div>
+        <div className="sidebar">
+          <h1>{process.env.REACT_APP_TITLE || "API Docs"}</h1>
+          <div className="navigation"></div>
+        </div>
         <div className="background"></div>
         <div className="content">
           {this.state.resources.map((resource, index) =>

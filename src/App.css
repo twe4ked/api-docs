@@ -14,13 +14,19 @@ p {
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.navigation {
+.sidebar {
   width: 220px;
   background: #f5f5f5;
   position: fixed;
   height: 100%;
-  padding-top: 0.2em;
   border-right: 1px solid #eee;
+}
+
+.sidebar h1 {
+  padding: 0.5rem 0 0.4rem 1rem;
+  margin: 0 0 0.4rem 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
 }
 
 .content {
@@ -46,7 +52,7 @@ section .right {
 }
 
 .padding {
-  padding: 1em;
+  padding: 1rem;
 }
 
 ul.toc-list {
@@ -57,12 +63,12 @@ ul.toc-list {
 
 a.toc-link {
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 0.5rem 1rem;
   display: block;
 }
 
 ul.toc-list ul.toc-list a.toc-link {
-  padding: 4px 8px 4px 24px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
 .is-active-link {
@@ -74,7 +80,7 @@ ul.toc-list ul.toc-list a.toc-link {
 }
 
 th {
-  font-size: 0.6em;
+  font-size: 0.6rem;
   font-weight: normal;
   text-align: left;
   text-transform: uppercase;
@@ -82,7 +88,7 @@ th {
 }
 
 td {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 th, td {
@@ -104,7 +110,7 @@ tbody tr {
 }
 
 code {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-family: monaco, Consolas, "Lucida Console", monospace;
 }
 
