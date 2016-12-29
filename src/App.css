@@ -40,9 +40,17 @@ section {
   display: flex;
 }
 
+section:first-of-type .left {
+  border-top: 1px solid #ddd;
+}
+
 section .left {
   flex: 1;
   border-bottom: 1px solid #ddd;
+}
+
+section:first-of-type .right {
+  border-top: 1px solid #333;
 }
 
 section .right {
