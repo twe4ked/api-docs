@@ -30,8 +30,9 @@ const Example = ({example}) => {
           {example.requests.map((request, index) =>
             <div key={index}>
               <code>{`${request.request_method} ${request.request_path}`}</code>
-              <SyntaxHighlighter language='json' style={irBlack}>
-                {JSON.stringify(JSON.parse(request.response_body), null, 2)}
+              <SyntaxHighlighter language='json' style={irBlack}
+                codeTagProps={{style: {fontFamily: 'inherit', fontSize: 'inherit'} }}>
+                  {JSON.stringify(JSON.parse(request.response_body), null, 2)}
               </SyntaxHighlighter>
             </div>
           )}
