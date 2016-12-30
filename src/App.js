@@ -148,8 +148,7 @@ class App extends Component {
         <div className="background"></div>
         <div className="content">
           {this.state.resources.map((resource, index) =>
-            <Resource key={index}
-              resource={resource}></Resource>
+            <Resource key={index} resource={resource} />
           )}
         </div>
       </div>
