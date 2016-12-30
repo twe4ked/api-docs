@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div className="container">
         <div className="sidebar">
-          <h1>{process.env.REACT_APP_TITLE || "API Docs"}</h1>
+          <h1><a href="#">{process.env.REACT_APP_TITLE || "API Docs"}</a></h1>
           <div className="navigation"></div>
         </div>
         <div className="background"></div>
