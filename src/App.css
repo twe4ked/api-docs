@@ -44,23 +44,15 @@ section {
   display: flex;
 }
 
-section:first-of-type .left {
-  border-top: 1px solid #eee;
-}
-
 section .left {
   flex: 1;
-  border-bottom: 1px solid #eee;
-}
-
-section:first-of-type .right {
-  border-top: 1px solid #333;
+  border-top: 1px solid #eee;
 }
 
 section .right {
   flex: 1;
   color: #fff;
-  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
 }
 
 .padding {
