@@ -29,10 +29,10 @@ const Example = ({example}) => {
         <div className="padding">
           {example.requests.map((request, index) =>
             <div key={index}>
-              <code>{`${request.request_method} ${request.request_path}`}</code>
+              <code>{`${request.requestMethod} ${request.requestPath}`}</code>
               <SyntaxHighlighter language='json' style={irBlack}
                 codeTagProps={{style: {fontFamily: 'inherit', fontSize: 'inherit'} }}>
-                  {JSON.stringify(JSON.parse(request.response_body), null, 2)}
+                  {JSON.stringify(JSON.parse(request.responseBody), null, 2)}
               </SyntaxHighlighter>
             </div>
           )}
