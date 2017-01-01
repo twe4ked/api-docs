@@ -17,6 +17,10 @@ const Example = ({example}) => {
           { !!example.description &&
             <SimpleFormat text={example.description} />
           }
+          { Object.keys(example.notes).map((level, index) =>
+              <p key={index} className={`note --${level}`}>{example.notes[level]}</p>
+            )
+          }
           <code className="path">
             {example.httpMethod} <strong>{example.path}</strong>
           </code>

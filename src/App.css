@@ -132,3 +132,28 @@ code.inline {
 .resource-info {
   width: 50%;
 }
+
+.note {
+  padding: 0.5rem;
+}
+
+.note.--success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.note.--info {
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+  color: #31708f;
+}
+
+.note.--warning {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+
+.note.--danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
