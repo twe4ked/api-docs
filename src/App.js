@@ -24,7 +24,7 @@ class App extends Component {
       tocSelector: '.navigation',
       contentSelector: '.content',
       headingSelector: 'h1, h2',
-      headingsOffset: 20,
+      headingsOffset: 80,
     });
   };
 
