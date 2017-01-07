@@ -34,6 +34,8 @@ const Example = ({example}) => {
           {example.requests.map((request, index) =>
             <div key={index}>
               <code>{`${request.requestMethod} ${request.requestPath}`}</code>
+              <br />
+              <code className="response-status">{`${request.responseStatus} ${request.responseStatusText}`}</code>
               <SyntaxHighlighter language='json' style={irBlack}
                 codeTagProps={{style: {fontFamily: 'inherit', fontSize: 'inherit'} }}>
                   {JSON.stringify(JSON.parse(request.responseBody), null, 2)}
