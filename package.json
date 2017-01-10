@@ -2,7 +2,7 @@
   "name": "api-docs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://twe4ked.github.io/api-docs/",
+  "homepage": "https://twe4ked.github.io/api-docs/",
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "react-scripts": "0.8.4"
