@@ -2,15 +2,27 @@ import './App.css';
 import React, { Component } from 'react';
 import tocbot from 'tocbot'
 import Resource from './views/Resource.js';
+import Login from './views/Login.js';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = { resources: [] };
+    this.state = {
+      resources: [],
+      authorized: true,
+    };
   }
 
-  componentDidMount() {
-    fetch(process.env.REACT_APP_JSON_URL)
+  fetchData(headers) {
+    fetch(process.env.REACT_APP_JSON_URL, {headers: headers, credentials: "cors"})
+      .then((response) => {
+        if (response.status === 401) {
+          this.setState({authorized: false});
+        } else {
+          this.setState({authorized: true});
+          return response;
+        }
+      })
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({resources: responseJson});
@@ -19,6 +31,10 @@ class App extends Component {
       .catch((error) => {
         console.error(error);
       });
+  }
+
+  componentDidMount() {
+    this.fetchData();
 
     tocbot.init({
       tocSelector: '.navigation',
@@ -37,6 +53,7 @@ class App extends Component {
         </div>
         <div className="background"></div>
         <div className="content">
+          {!this.state.authorized && <Login fetchData={this.fetchData.bind(this)} />}
           {this.state.resources.map((resource, index) =>
             <Resource key={index} resource={resource} />
           )}

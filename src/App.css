@@ -161,3 +161,36 @@ code.inline {
 .response-status {
   color: #666;
 }
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+label div {
+  margin-bottom: 0.2rem;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #999;
+}
+
+input:focus {
+  border: 1px solid #0275d8;
+  outline: none;
+}
+
+input.btn {
+  width: auto;
+  color: #0275d8;
+  border: 1px solid #0275d8;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
