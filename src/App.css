@@ -157,14 +157,23 @@ code {
 }
 
 code.path {
-  background: #eee;
+  background: #f3f3f3;
   display: block;
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3px;
+  color: #3c3c3c;
+  border: 1px solid #cacaca;
+  box-shadow: 0 1px 0px #cacaca;
+  margin: 20px 0;
 }
 
 code.inline {
   background: #eee;
   padding: 0.2rem 0.4rem;
+  background: #f3f3f3;
+  border-radius: 3px;
+  color: #3c3c3c;
+  border: 1px solid #cacaca;
 }
 
 .resource-info {
