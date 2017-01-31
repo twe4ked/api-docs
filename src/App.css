@@ -182,6 +182,9 @@ code.inline {
 
 .note {
   padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
 
 .note.--success {
@@ -191,7 +194,6 @@ code.inline {
 
 .note.--info {
   background-color: #d9edf7;
-  border-color: #bcdff1;
   color: #31708f;
 }
 
