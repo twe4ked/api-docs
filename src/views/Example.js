@@ -8,7 +8,28 @@ import ResponseFields from './ResponseFields.js';
 
 registerLanguage('json', json);
 
+const codeboxStyleOne = {
+  boxShadow: 'inset 0 1px 0 black',
+  background: 'rgba(255, 255, 255, 0.05)',
+}
+
+const codeboxStyleTwo = {
+  background: 'rgba(0, 0, 0, 0.2)',
+}
+
+const codeboxStyleThree = {
+  background: 'rgba(255, 255, 255, 0.05)',
+}
+
 const Example = ({example}) => {
+  Object.assign(irBlack.hljs, {
+    background: 'rgba(0, 0, 0, 0.25)',
+    borderRadius: '3px',
+    padding: '1rem',
+    border: '1px solid black',
+  })
+  Object.assign(irBlack.hljs, codeboxStyleThree)
+
   return (
     <section>
       <div className="left">
