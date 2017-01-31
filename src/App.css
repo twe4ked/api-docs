@@ -60,7 +60,21 @@ section .right {
 }
 
 .padding {
-  padding: 1rem;
+  padding: 2rem 2.5rem;
+}
+
+.node-name--H1 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.node-name--H1.is-active-link::before {
+  display: none;
+}
+
+.node-name--H2 {
+  font-size: 0.85rem;
 }
 
 ul.toc-list {
@@ -69,10 +83,18 @@ ul.toc-list {
   list-style: none;
 }
 
+.toc-list-item {
+  position: relative;
+}
+
 a.toc-link {
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
+}
+
+a.toc-link:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
 
 ul.toc-list ul.toc-list a.toc-link {
@@ -81,6 +103,17 @@ ul.toc-list ul.toc-list a.toc-link {
 
 .is-active-link {
   color: #1888ce;
+}
+
+.is-active-link::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  width: 4px;
+  height: 4px;
+  background-color: #1888CE;
+  border-radius: 50%;
 }
 
 .is-collapsed {
