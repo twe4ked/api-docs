@@ -23,10 +23,11 @@ p {
   position: fixed;
   height: 100%;
   border-right: 1px solid #eee;
+  overflow: scroll;
 }
 
 .sidebar h1 {
-  padding: 0.5rem 0 0.4rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   margin: 0 0 0.4rem 0;
   font-size: 1.2rem;
   border-bottom: 1px solid #eee;
