@@ -64,9 +64,8 @@ section .right {
 }
 
 .node-name--H1 {
-  font-size: 1.05rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  margin-top: 10px;
 }
 
 .node-name--H1.is-active-link::before {
