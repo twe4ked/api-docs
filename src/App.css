@@ -4,14 +4,17 @@ body {
 
 h1, h2, h3 {
   font-weight: normal;
+  color: #444;
 }
 
 a {
-  color: #000;
+  color: #676767;
 }
 
 p {
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  opacity: 0.7;
+  margin: 0.8em 0;
 }
 
 .sidebar {
@@ -20,10 +23,11 @@ p {
   position: fixed;
   height: 100%;
   border-right: 1px solid #eee;
+  overflow: scroll;
 }
 
 .sidebar h1 {
-  padding: 0.5rem 0 0.4rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   margin: 0 0 0.4rem 0;
   font-size: 1.2rem;
   border-bottom: 1px solid #eee;
@@ -56,7 +60,20 @@ section .right {
 }
 
 .padding {
-  padding: 1rem;
+  padding: 2rem 2.5rem;
+}
+
+.node-name--H1 {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.node-name--H1.is-active-link::before {
+  display: none;
+}
+
+.node-name--H2 {
+  font-size: 0.85rem;
 }
 
 ul.toc-list {
@@ -65,10 +82,18 @@ ul.toc-list {
   list-style: none;
 }
 
+.toc-list-item {
+  position: relative;
+}
+
 a.toc-link {
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
+}
+
+a.toc-link:hover {
+  background: rgba(0, 0, 0, 0.03);
 }
 
 ul.toc-list ul.toc-list a.toc-link {
@@ -93,6 +118,7 @@ th {
 
 td {
   font-size: 0.9rem;
+  font-size: 13px;
 }
 
 th, td {
@@ -119,14 +145,20 @@ code {
 }
 
 code.path {
-  background: #eee;
+  background: #f3f3f3;
   display: block;
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3px;
+  color: #3c3c3c;
+  margin: 20px 0;
 }
 
 code.inline {
   background: #eee;
   padding: 0.2rem 0.4rem;
+  background: #f3f3f3;
+  border-radius: 3px;
+  color: #3c3c3c;
 }
 
 .resource-info {
@@ -135,6 +167,8 @@ code.inline {
 
 .note {
   padding: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
 
 .note.--success {
@@ -144,7 +178,6 @@ code.inline {
 
 .note.--info {
   background-color: #d9edf7;
-  border-color: #bcdff1;
   color: #31708f;
 }
 

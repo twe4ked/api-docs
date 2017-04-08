@@ -9,6 +9,13 @@ import ResponseFields from './ResponseFields.js';
 registerLanguage('json', json);
 
 const Example = ({example}) => {
+  Object.assign(irBlack.hljs, {
+    background: 'rgba(0, 0, 0, 0.25)',
+    borderRadius: '3px',
+    padding: '1rem',
+    border: 'none',
+  })
+
   return (
     <section>
       <div className="left">
