@@ -105,17 +105,6 @@ ul.toc-list ul.toc-list a.toc-link {
   color: #1888ce;
 }
 
-.is-active-link::before {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: 14px;
-  width: 4px;
-  height: 4px;
-  background-color: #1888CE;
-  border-radius: 50%;
-}
-
 .is-collapsed {
   display: none;
 }
