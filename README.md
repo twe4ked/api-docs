@@ -19,3 +19,9 @@ npm start
 ```
 npm run deploy
 ```
+
+## Run via Docker and docker-compose (https://docker.io)
+
+```
+$ docker-compose up
+```
