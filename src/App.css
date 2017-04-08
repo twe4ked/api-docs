@@ -162,8 +162,6 @@ code.path {
   padding: 0.5rem 0.8rem;
   border-radius: 3px;
   color: #3c3c3c;
-  border: 1px solid #cacaca;
-  box-shadow: 0 1px 0px #cacaca;
   margin: 20px 0;
 }
 
@@ -173,7 +171,6 @@ code.inline {
   background: #f3f3f3;
   border-radius: 3px;
   color: #3c3c3c;
-  border: 1px solid #cacaca;
 }
 
 .resource-info {
@@ -182,7 +179,6 @@ code.inline {
 
 .note {
   padding: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   font-size: 0.9rem;
 }

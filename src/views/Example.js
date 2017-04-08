@@ -26,7 +26,7 @@ const Example = ({example}) => {
     background: 'rgba(0, 0, 0, 0.25)',
     borderRadius: '3px',
     padding: '1rem',
-    border: '1px solid black',
+    border: 'none',
   })
   Object.assign(irBlack.hljs, codeboxStyleThree)
 
