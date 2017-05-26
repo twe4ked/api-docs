@@ -5,6 +5,7 @@ import json from 'highlight.js/lib/languages/json';
 import irBlack from 'react-syntax-highlighter/dist/styles/ir-black';
 import Parameters from './Parameters.js';
 import ResponseFields from './ResponseFields.js';
+import RequestHeaders from './RequestHeaders.js';
 
 registerLanguage('json', json);
 
@@ -32,6 +33,7 @@ const Example = ({example}) => {
             {example.httpMethod} <strong>{example.path}</strong>
           </code>
           { !!example.parameters.length && <Parameters parameters={example.parameters} /> }
+          { <RequestHeaders requestHeaders={example.requests[0].requestHeaders} /> }
           { !!example.responseFields.length && <ResponseFields responseFields={example.responseFields} /> }
         </div>
       </div>
