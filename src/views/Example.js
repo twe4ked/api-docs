@@ -1,5 +1,5 @@
 import React from 'react';
-import SimpleFormat from 'react-simple-format';
+import ReactMarkdown from 'react-markdown';
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/light"
 import json from 'highlight.js/lib/languages/json';
 import irBlack from 'react-syntax-highlighter/dist/styles/ir-black';
@@ -23,7 +23,7 @@ const Example = ({example}) => {
         <div className="padding">
           <h2 id={example.name.toLowerCase().replace(/[^a-z]/g, '-')}>{example.name}</h2>
           { !!example.description &&
-            <SimpleFormat text={example.description} />
+            <ReactMarkdown source={example.description} />
           }
           { Object.keys(example.notes).map((level, index) =>
               <p key={index} className={`note --${level}`}>{example.notes[level]}</p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Example from './Example.js';
-import SimpleFormat from 'react-simple-format';
+import ReactMarkdown from 'react-markdown';
 
 const Resource = ({resource}) => {
   return (
@@ -9,7 +9,7 @@ const Resource = ({resource}) => {
         <div className="padding">
           <h1 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h1>
           { !!resource.description &&
-            <SimpleFormat text={resource.description} />
+            <ReactMarkdown source={resource.description} />
           }
         </div>
       </div>
