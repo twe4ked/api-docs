@@ -29,11 +29,13 @@ const Example = ({example}) => {
               <p key={index} className={`note --${level}`}>{example.notes[level]}</p>
             )
           }
-          <code className="path">
-            {example.httpMethod} <strong>{example.path}</strong>
-          </code>
+          { !!example.path &&
+            <code className="path">
+              {example.httpMethod} <strong>{example.path}</strong>
+            </code>
+          }
           { !!example.parameters.length && <Parameters parameters={example.parameters} /> }
-          { <RequestHeaders requestHeaders={example.requests[0].requestHeaders} /> }
+          { !!example.requests.length && <RequestHeaders requestHeaders={example.requests[0].requestHeaders} /> }
           { !!example.responseFields.length && <ResponseFields responseFields={example.responseFields} /> }
         </div>
       </div>
