@@ -11,10 +11,18 @@ a {
   color: #676767;
 }
 
-p {
+.content p, .content li {
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  opacity: 0.7;
+}
+
+p {
   margin: 0.8em 0;
+  opacity: 0.7;
+  line-height: 1.4rem;
+}
+
+.content ul li {
+  padding-bottom: 0.4rem;
 }
 
 .sidebar {
@@ -142,10 +150,13 @@ tbody tr {
 code {
   font-size: 0.8rem;
   font-family: monaco, Consolas, "Lucida Console", monospace;
+  white-space: nowrap;
+  padding: 0.2rem 0.4rem;
+  background: #f3f3f3;
+  border-radius: 3px;
 }
 
 code.path {
-  background: #f3f3f3;
   display: block;
   padding: 0.5rem 0.8rem;
   border-radius: 3px;
@@ -155,9 +166,6 @@ code.path {
 
 code.inline {
   background: #eee;
-  padding: 0.2rem 0.4rem;
-  background: #f3f3f3;
-  border-radius: 3px;
   color: #3c3c3c;
 }
 
