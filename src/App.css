@@ -171,6 +171,18 @@ code.inline {
   font-size: 0.9rem;
 }
 
+.note p:first-child {
+  margin-top: 0;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+.note a {
+  color: inherit;
+}
+
 .note.--success {
   background-color: #dff0d8;
   color: #3c763d;

@@ -26,7 +26,9 @@ const Example = ({example}) => {
             <ReactMarkdown source={example.description} />
           }
           { Object.keys(example.notes).map((level, index) =>
-              <p key={index} className={`note --${level}`}>{example.notes[level]}</p>
+              <div key={index} className={`note --${level}`}>
+                <ReactMarkdown source={example.notes[level]} />
+              </div>
             )
           }
           { !!example.path &&
