@@ -156,7 +156,6 @@ tbody tr {
 code {
   font-size: 0.8rem;
   font-family: monaco, Consolas, "Lucida Console", monospace;
-  white-space: nowrap;
 }
 
 code.path {
