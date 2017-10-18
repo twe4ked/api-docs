@@ -147,10 +147,16 @@ tbody tr {
   border-bottom: 1px solid #eee;
 }
 
-.content .left code {
+.content .left code, .content .resource-info code {
   padding: 0.2rem 0.4rem;
   background: #f3f3f3;
   border-radius: 3px;
+}
+
+.content .left pre > code, .content .resource-info pre > code {
+  display: block;
+  padding: 0.6rem;
+  overflow: scroll;
 }
 
 code {
