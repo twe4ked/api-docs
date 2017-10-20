@@ -7,14 +7,14 @@ const Resource = ({resource}) => {
     <div>
       <div className="resource-info">
         <div className="padding">
-          <h1 id={resource.name.toLowerCase().replace(/[^a-z]/g, '-')}>{resource.name}</h1>
+          <h1 id={resource.name.toLowerCase().replace(/[^\w]/g, '-')}>{resource.name}</h1>
           { !!resource.description &&
             <ReactMarkdown source={resource.description} />
           }
         </div>
       </div>
       {resource.examples.map((example, index) =>
-        <Example key={index} example={example} />
+        <Example key={index} example={example} resourceName={resource.name} />
       )}
     </div>
   )
