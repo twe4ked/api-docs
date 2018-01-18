@@ -27,6 +27,8 @@ class App extends Component {
       .then((responseJson) => {
         this.setState({resources: responseJson});
         tocbot.refresh()
+        var anchor = document.getElementById(window.location.hash.slice(1))
+        anchor && anchor.scrollIntoView()
       })
       .catch((error) => {
         console.error(error);
