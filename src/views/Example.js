@@ -9,7 +9,7 @@ import RequestHeaders from './RequestHeaders.js';
 
 registerLanguage('json', json);
 
-const Example = ({example, resourceName}) => {
+const Example = ({example, resourceName, sanitizeId}) => {
   Object.assign(irBlack.hljs, {
     background: 'rgba(0, 0, 0, 0.25)',
     borderRadius: '3px',
@@ -21,7 +21,7 @@ const Example = ({example, resourceName}) => {
     <section>
       <div className="left">
         <div className="padding">
-          <h2 id={`${resourceName}-${example.name}`.toLowerCase().replace(/[^\w]/g, '-')}>{example.name}</h2>
+          <h2 id={sanitizeId(`${resourceName}-${example.name}`)}>{example.name}</h2>
           { !!example.description &&
             <ReactMarkdown source={example.description} />
           }
