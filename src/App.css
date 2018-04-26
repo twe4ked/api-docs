@@ -62,6 +62,7 @@ section .left {
 }
 
 section .right {
+  padding-top: 4rem;
   width: 50%;
   color: #fff;
   border-top: 1px solid #333;
